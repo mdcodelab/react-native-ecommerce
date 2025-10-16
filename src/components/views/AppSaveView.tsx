@@ -1,0 +1,33 @@
+import React from 'react';
+import { View, SafeAreaView, StyleSheet, Platform, StatusBar, StyleProp,
+     ViewStyle, ViewProps } from 'react-native';
+import { AppColors } from '../../styles/colors';
+
+interface AppSaveViewProps extends ViewProps {
+  children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}
+
+function AppSaveView({ children, style, ...rest }: AppSaveViewProps) {
+  return (
+    <SafeAreaView style={[styles.container, style]} {...rest}>
+      <View style={styles.content}>{children}</View>
+    </SafeAreaView>
+  );
+}
+
+export default AppSaveView;
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: AppColors.whiteColor,
+        alignItems: "center",
+        justifyContent: "center",
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight || 0    : 0,
+    },
+    content: {
+        flex: 1,
+        width: "100%",
+    }
+});
