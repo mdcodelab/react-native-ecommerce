@@ -24,6 +24,10 @@ bold: {
 medium: {
   fontSize: s(16),  
   color: "#000"
+}, 
+small: {
+  fontSize: s(12),
+  color: "#000"
 }
 });
     

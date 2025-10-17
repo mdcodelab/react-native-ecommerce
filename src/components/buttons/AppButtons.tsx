@@ -16,8 +16,9 @@ interface AppButtonsProps extends TouchableOpacityProps {
 }
 
 function AppButtons({ onPress, text, style, 
-    backgroundColor = AppColors.primaryColor, 
-    textColor = AppColors.whiteColor, styleTitle,
+    backgroundColor, 
+    textColor, 
+    styleTitle,
     disabled, ...rest }: AppButtonsProps) {
   return (
     <TouchableOpacity 
@@ -26,7 +27,9 @@ function AppButtons({ onPress, text, style,
     {...rest}
     disabled={disabled}
       style={[styles.button, style, { backgroundColor: disabled ? AppColors.disableButton : backgroundColor }]}>
-    <AppText variant="bold" style={[styles.textContent, {color: textColor}, styleTitle]}>{text}</AppText>
+    <AppText 
+    variant="bold" 
+    style={[styles.textContent, {color: textColor}, styleTitle]}>{text}</AppText>
     </TouchableOpacity>
   )
 }
@@ -40,8 +43,9 @@ const styles = StyleSheet.create({
         backgroundColor: "#000",
         alignItems: "center",
         justifyContent: "center",
-        borderRadius: s(25),
+        borderRadius: s(10),
         alignSelf: "center",
+        marginBottom: vs(10),
     },
     textContent: {
         color: "#fff",

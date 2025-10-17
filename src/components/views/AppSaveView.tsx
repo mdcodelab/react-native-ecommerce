@@ -2,6 +2,7 @@ import React from 'react';
 import { View, SafeAreaView, StyleSheet, Platform, StatusBar, StyleProp,
      ViewStyle, ViewProps } from 'react-native';
 import { AppColors } from '../../styles/colors';
+import { vs } from 'react-native-size-matters';
 
 interface AppSaveViewProps extends ViewProps {
   children?: React.ReactNode;
@@ -25,9 +26,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight || 0    : 0,
-    },
+      },
     content: {
         flex: 1,
         width: "100%",
+        alignItems: "center",
     }
 });

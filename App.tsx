@@ -4,21 +4,15 @@ import AppText from './src/components/texts/AppText';
 import AppSaveView from './src/components/views/AppSaveView';
 import FlashMessage, { showMessage } from 'react-native-flash-message';
 import AppButtons from './src/components/buttons/AppButtons';
+import AppTextInputs from './src/components/inputs/AppTextInputs';
+import LoginScreen from './src/screen/auth/LoginScreen';
 
 export default function App() {
   return (
     <>
     <FlashMessage position="top" />
     <AppSaveView style={styles.container}>
-      <AppButtons text="Show message" onPress={() => 
-        showMessage({ message: 'Hello World!', type: 'info' })}></AppButtons>
-      <AppText
-        variant="medium"
-        onPress={() => showMessage({ message: 'Hello World!', type: 'info' })}
-      >
-        Hello World!
-      </AppText>
-      <AppText variant="bold">Hello World!</AppText>
+      <LoginScreen></LoginScreen>
       <StatusBar style="auto" />
     </AppSaveView>
     </>
