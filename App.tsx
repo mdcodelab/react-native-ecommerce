@@ -3,12 +3,15 @@ import { StyleSheet } from 'react-native';
 import AppText from './src/components/texts/AppText';
 import AppSaveView from './src/components/views/AppSaveView';
 import FlashMessage, { showMessage } from 'react-native-flash-message';
+import AppButtons from './src/components/buttons/AppButtons';
 
 export default function App() {
   return (
     <>
     <FlashMessage position="top" />
     <AppSaveView style={styles.container}>
+      <AppButtons text="Show message" onPress={() => 
+        showMessage({ message: 'Hello World!', type: 'info' })}></AppButtons>
       <AppText
         variant="medium"
         onPress={() => showMessage({ message: 'Hello World!', type: 'info' })}
