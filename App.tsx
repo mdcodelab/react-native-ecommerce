@@ -6,15 +6,17 @@ import FlashMessage, { showMessage } from 'react-native-flash-message';
 import AppButtons from './src/components/buttons/AppButtons';
 import AppTextInputs from './src/components/inputs/AppTextInputs';
 import LoginScreen from './src/screen/auth/LoginScreen';
+import SignUpScreen from './src/screen/auth/SignUpScreen';
+import AuthNavigator from './src/navigation/AuthNavigator';
+import { NavigationContainer } from '@react-navigation/native';
+import AppNavigator from './src/navigation/AppNavigator';
 
 export default function App() {
   return (
     <>
-    <FlashMessage position="top" />
-    <AppSaveView style={styles.container}>
-      <LoginScreen></LoginScreen>
-      <StatusBar style="auto" />
-    </AppSaveView>
+    <NavigationContainer>
+    <AppNavigator/>
+    </NavigationContainer>
     </>
   );
 }

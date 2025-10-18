@@ -22,7 +22,14 @@ function LoginScreen({ navigation }: any) {
       text="Login" 
       style={styles.buttonLogin} 
       styleTitle={{color: AppColors.whiteColor}}
-      backgroundColor={AppColors.primaryColor}/>
+      backgroundColor={AppColors.primaryColor}
+      onPress={() =>
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'MainTabs' }],
+        })
+      }
+      />
       <AppButtons 
       text="Sign Up" 
       style={styles.buttonSignUp}
