@@ -2,7 +2,7 @@ import React from 'react';
 import { View, SafeAreaView, StyleSheet, Platform, StatusBar, StyleProp,
      ViewStyle, ViewProps } from 'react-native';
 import { AppColors } from '../../styles/colors';
-import { vs } from 'react-native-size-matters';
+import { vs, s } from 'react-native-size-matters';
 
 interface AppSaveViewProps extends ViewProps {
   children?: React.ReactNode;

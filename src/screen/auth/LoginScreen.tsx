@@ -20,11 +20,12 @@ function LoginScreen({navigation}: any) {
       <AppButtons 
       text="Login" 
       style={styles.buttonLogin} 
-      styleTitle={{color: AppColors.whiteColor, fontSize: s(12)}} />
+      styleTitle={{color: AppColors.whiteColor}} backgroundColor={AppColors.primaryColor}/>
       <AppButtons 
       text="Sign Up" 
       style={styles.buttonSignUp}
-      styleTitle={{color: AppColors.primaryColor, fontSize: s(12)}}/>
+      backgroundColor={AppColors.whiteColor}
+      styleTitle={{color: AppColors.primaryColor}}/>
     </AppSaveView>
   )
 }
@@ -33,26 +34,30 @@ export default LoginScreen;
 
 const styles = StyleSheet.create({
     container: {
+      width: "100%",
       alignItems: "center",
       paddingVertical: Platform.OS === "android" ? StatusBar.currentHeight || 0 : 0,
-      },
+      backgroundColor: AppColors.backgroundBlue,
+      paddingHorizontal: s(10),
+    },
       logo: {
         width: s(150),
         height: s(150),
         marginBottom: vs(30),
+        marginTop: s(30),
       },
       buttonLogin: {
         width: "100%",
         marginBottom: vs(10),
+        marginTop: vs(30),
         fontSize: s(12),
-        backgroundColor: AppColors.primaryColor,
+        backgroundColor: "#000000",
       },
       buttonSignUp: {
         width: "100%",
         marginBottom: vs(10),
         fontSize: s(12),
         backgroundColor: AppColors.whiteColor,
-        borderColor: AppColors.primaryColor,
         borderWidth: 1,
       },
   });

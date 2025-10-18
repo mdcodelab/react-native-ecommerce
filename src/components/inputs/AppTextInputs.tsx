@@ -33,13 +33,13 @@ export default AppTextInputs;
 const styles = StyleSheet.create({
     input: {
       height: vs(40),
+      width: "100%",
       borderWidth: 1,
       borderColor: AppColors.borderColor,
       borderRadius: s(10),
       paddingHorizontal: vs(15),
-      fontSize: s(12),
+      fontSize: s(16),
       backgroundColor: AppColors.whiteColor,
-      width: "100%",
       marginBottom: vs(10),
     }
 });
