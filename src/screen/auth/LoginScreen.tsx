@@ -7,10 +7,11 @@ import {vs, s} from 'react-native-size-matters';
 import AppTextInputs from '../../components/inputs/AppTextInputs';
 import AppButtons from '../../components/buttons/AppButtons';
 
-function LoginScreen({navigation}: any) {
+function LoginScreen({ navigation }: any) {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [confirmPassword, setConfirmPassword] = React.useState('');
+  
   return (
     <AppSaveView style={styles.container}>
       <Image source={require("../../../assets/images/logo.png")} 
@@ -20,12 +21,14 @@ function LoginScreen({navigation}: any) {
       <AppButtons 
       text="Login" 
       style={styles.buttonLogin} 
-      styleTitle={{color: AppColors.whiteColor}} backgroundColor={AppColors.primaryColor}/>
+      styleTitle={{color: AppColors.whiteColor}}
+      backgroundColor={AppColors.primaryColor}/>
       <AppButtons 
       text="Sign Up" 
       style={styles.buttonSignUp}
       backgroundColor={AppColors.whiteColor}
-      styleTitle={{color: AppColors.primaryColor}}/>
+      styleTitle={{color: AppColors.primaryColor}}
+      onPress={() => navigation.navigate("SignUp")}/>
     </AppSaveView>
   )
 }

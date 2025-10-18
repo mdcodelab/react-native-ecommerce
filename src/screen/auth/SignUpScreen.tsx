@@ -7,7 +7,7 @@ import {vs, s} from 'react-native-size-matters';
 import AppTextInputs from '../../components/inputs/AppTextInputs';
 import AppButtons from '../../components/buttons/AppButtons';
 
-function SignUpScreen({navigation}: any) {
+function SignUpScreen({ navigation }: any) {
     const [userName, setUserName]=React.useState("");
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -22,12 +22,15 @@ function SignUpScreen({navigation}: any) {
       <AppButtons 
       text="Create New Account" 
       style={styles.buttonCreateAccount} 
-      styleTitle={{color: AppColors.whiteColor}} backgroundColor={AppColors.primaryColor}/>
+      styleTitle={{color: AppColors.whiteColor}} 
+      backgroundColor={AppColors.primaryColor}/>
+      
       <AppButtons 
       text="Go To Sign In" 
       style={styles.buttonGoToSignIn}
       backgroundColor={AppColors.whiteColor}
-      styleTitle={{color: AppColors.primaryColor}}/>
+      styleTitle={{color: AppColors.primaryColor}}
+      onPress={() => navigation.navigate("Login")}/>
     </AppSaveView>
   )
 }
