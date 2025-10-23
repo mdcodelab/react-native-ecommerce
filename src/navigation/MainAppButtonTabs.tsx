@@ -1,9 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-import HomeScreen from '../screen/home/HomeScreen';
-import ProfileScreen from '../screen/profile/ProfilerScreen';
-import CartScreen from '../screen/cart/CartScreen';
+import HomeScreen from '../screens/home/HomeScreen';
+import ProfileScreen from '../screens/profile/ProfilerScreen';
+import CartScreen from '../screens/cart/CartScreen';
 import { AppColors } from '../styles/colors';
 import { vs } from 'react-native-size-matters';
 
@@ -18,7 +18,7 @@ export function MyTabs() {
       tabBarInactiveTintColor: AppColors.primaryColor,
       tabBarStyle: {
         backgroundColor: AppColors.whiteColor,
-        marginBottom: vs(15),
+        marginBottom: vs(5),
       },
       tabBarLabelStyle: {
         fontSize: vs(12),
