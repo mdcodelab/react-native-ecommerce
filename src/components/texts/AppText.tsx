@@ -19,15 +19,18 @@ function AppText({ children, style, variant = 'bold', ...rest }: AppTextProps) {
 const Styles = StyleSheet.create({
 bold: {
   fontSize: s(18),
-  color: "#000"
+  color: "#000",
+  fontFamily: "Nunito-Bold",
 },
 medium: {
   fontSize: s(16),  
-  color: "#000"
+  color: "#000",
+  fontFamily: "Nunito-Regular",
 }, 
 small: {
   fontSize: s(12),
-  color: "#000"
+  color: "#000",
+  fontFamily: "Nunito-Regular",
 }
 });
     

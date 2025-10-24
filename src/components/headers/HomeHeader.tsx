@@ -25,9 +25,9 @@ const styles = StyleSheet.create({
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "center",
-      height: vs(40),
+      height: vs(50),
       width: "100%",
-      paddingVertical: vs(10),
+      paddingVertical: vs(5),
     },
     content: {
       width: s(40),
@@ -39,5 +39,6 @@ const styles = StyleSheet.create({
     image : {
       width: s(40),
       height: vs(40),
+      borderRadius: s(5),
     }
 });

@@ -50,6 +50,8 @@ const styles = StyleSheet.create({
         height: s(150),
         marginBottom: vs(30),
         marginTop: s(30),
+        alignSelf: "center",
+        borderRadius: s(10),
       },
       buttonCreateAccount: {
         width: "100%",

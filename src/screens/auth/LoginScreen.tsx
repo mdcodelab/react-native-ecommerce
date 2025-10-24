@@ -36,6 +36,8 @@ function LoginScreen({ navigation }: any) {
       backgroundColor={AppColors.whiteColor}
       styleTitle={{color: AppColors.primaryColor}}
       onPress={() => navigation.navigate("SignUp")}/>
+
+
     </AppSaveView>
   )
 }
@@ -55,6 +57,8 @@ const styles = StyleSheet.create({
         height: s(150),
         marginBottom: vs(30),
         marginTop: s(30),
+        alignSelf: "center",
+        borderRadius: s(10),
       },
       buttonLogin: {
         width: "100%",

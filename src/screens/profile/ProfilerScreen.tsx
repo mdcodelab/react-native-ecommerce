@@ -8,6 +8,7 @@ function ProfileScreen() {
   return (
     <AppSaveView>
 <HomeHeader></HomeHeader>
+<Text>Profile Screen</Text>
     </AppSaveView>
   )
 }
