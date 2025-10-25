@@ -9,7 +9,7 @@ import { sharedStyles } from '../../styles/sharedStyles';
 interface ProductCardProps {
     title: string;
     price: number;
-    imageURL: string;
+    imageURL: number;
     onCard: () => void;
 }
 
@@ -21,7 +21,7 @@ function ProductCard({title, price, imageURL, onCard}: ProductCardProps) {
         </TouchableOpacity>
 
         <View style={styles.imageContainer}>
-            <Image source={{uri: imageURL}}
+            <Image source={imageURL}
             style={styles.image}></Image>
             </View>
         <View style={styles.titleContainer}>
