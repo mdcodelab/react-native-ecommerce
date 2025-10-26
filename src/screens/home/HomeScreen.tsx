@@ -14,7 +14,6 @@ function HomeScreen() {
   return (
     <AppSaveView>
 <HomeHeader></HomeHeader>
-<Text style={{fontFamily: "Nunito-Regular", fontSize: vs(20)}}>HomeScreen</Text>
     <View style={styles.content}>
       <FlatList 
       data={products}

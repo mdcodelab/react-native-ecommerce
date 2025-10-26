@@ -4,13 +4,15 @@ import {s, vs} from 'react-native-size-matters';
 import { View, Text} from 'react-native';
 import HomeHeader from '../../components/headers/HomeHeader';
 import EmptyCartScreen from './EmptyCartScreen';
+import CartItem from './CartItem';
 
 function CartScreen() {
+   const [quantity, setQuantity] = React.useState(1);
   return (
     <AppSaveView>
       <HomeHeader></HomeHeader>
-      <Text>CartScreen</Text>
-      <EmptyCartScreen></EmptyCartScreen>
+      {/* <EmptyCartScreen></EmptyCartScreen> */}
+      <CartItem></CartItem>
     </AppSaveView>
   )
 }
